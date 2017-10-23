@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>-->
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #w3 a {
+            text-decoration: none;
+            font-size: 25px;
+            line-height: 1;
+            /*letter-spacing: 3px;*/
+            display: block;
+            position: absolute;
+            top: 17px;
+            color: #555555;
+            font-weight: bold;
+        }
+
+        .dotcom {
+            color: #4CAF50;
+            font-size: 25px;
+            line-height: 1;
+            top: 17px;
+            font-weight: bold;
+        }
+
+        #toptext {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            color: #333;
+            top: 17px;
+            letter-spacing: 4px;
+        }
+
+        #row2 {
+            margin-top: 35px;
+        }
+
+        .navul {
+            font-size: 17px;
+            color: #f1f1f1;
+            letter-spacing: 1px;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .customdiv {
+            margin: 2px;
+            height: 300px;
+            background-color: #ddd;
+        }
+
+        .sidebarul a {
+            font-size: 15px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            text-decoration: none;
+            margin-bottom: 5px;
+            color: #000000;
+            /*display: block;*/
+            /*padding: 2px 1px 1px 1px;*/
+        }
+
+        .sidebarul {
+            list-style-type: none;
+            margin-bottom: 5px;
+            padding-left: 20px;
+
+        }
+
+        .sidescroll {
+            overflow: scroll;
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" id="w3"><a href="https://www.w3schools.com/">w3Schools
+            <span class="dotcom">.com</span></a></div>
+        <div class="col-md-5 col-md-offset-4" id="toptext">
+            THE WORLD'S LARGEST WEB DEVELOPER SITE
+        </div>
+    </div>
+    <div class="row" id="row2">
+        <div class="col-md-12">
+            <div class="navbar navbar-inverse">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navul">
+                        <li><a href="#" class="glyphicon glyphicon-home" id="home"></a></li>
+                        <li><a href="#" id="html">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JAVASCRIPT</a></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#" id="bootstrap">BOOTSTRAP</a></li>
+                        <li><a href="#">JQUERY</a></li>
+                        <li><a href="#">MORE</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" id="register">Register</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-globe"></a></li>
+                        <li><a href="#" class="glyphicon glyphicon-search"></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row" id="row3">
+        <div id="sidebar">
+
+        </div>
+
+        <!--Image Slides-->
+        <div id="content">
+
+        </div>
+    </div>
+
+    <!--Login Modal-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title" style="font-size: 20px;color: #33D0FD;">Login</span>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right;">Close
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group has-feedback">
+                                <label for="email">Email:</label>
+                                <input type="text" name="email" id="email" class="form-control"
+                                       placeholder="Enter email" data-toggle="tooltip" data-placement="top"
+                                       title="Please enter email"/>
+                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="pwd">Password:</label>
+                                <input type="text" name="pwd" id="pwd" class="form-control" placeholder="Enter password"
+                                       data-toggle="tooltip" data-placement="top" title="Please enter password"/>
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" style="float: left;margin-left: 200px;">Submit
+                        </button>
+                        <button type="button" class="btn btn-default" style="float: left;margin-left: 20px;">Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $("#content").load("Carousel1.html");
+        $("#sidebar").load("html.html");
+        $("#home").click(function (e) {
+            $("#content").empty();
+            $("#content").load("Carousel1.html");
+            $("#sidebar").load("html.html");
+        })
+        $("#html").click(function (e) {
+            $("#sidebar").empty();
+            $("#sidebar").load("html.html");
+        })
+        $("#bootstrap").click(function (e) {
+            $("#sidebar").empty();
+            $("#sidebar").load("bootstrap.html");
+        })
+        $("#register").click(function (e) {
+            $("#content").empty();
+            $("#content").load("Form.html");
+        })
+    });
+
+</script>
+</body>
+</html>
