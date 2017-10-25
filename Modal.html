@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Modal Example</h2>
+    <!-- Trigger the modal with a button -->
+    <!--<button type="button"  data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+    <a href="#" data-toggle="modal" data-target="#myModal">Login</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+            <form role="form">
+                <div class="form-group has-feedback">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Enter email"/>
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="pwd">Password:</label>
+                    <input type="text" name="pwd" id="pwd" class="form-control" placeholder="Enter password"/>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="float: left;margin-left: 200px;">Submit</button>
+                <button type="button" class="btn btn-default" style="float: left;margin-left: 20px;">Reset</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
